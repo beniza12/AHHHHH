@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main(){
+
+   char*menu;
+    int choice;
+    int quantity;
+    int price;
+    float vat;
+    float total;
+    float subtotal;
+    
+
+    printf("- - - -Menu - - - -\n1 - Burger Php 120.00\n");
+    printf("2 - Pizza Php 250.00\n");
+    printf("3 - Chicken Php 180.00\n\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+    printf("Enter quantity: ");
+    scanf("%d", &quantity);
+
+    switch(choice){
+        case 1:
+        menu = "Burger";
+        price = 120;
+        
+            
+        break;
+
+        case 2:
+        menu = "Pizza";
+        price = 250;
+            
+        break;
+
+        case 3:
+        menu = "Chicken";
+        price = 180;
+            
+        break;
+
+        default:
+        printf("INVALID CHOICE");
+    }
+    subtotal = quantity * price;
+        vat = subtotal * 0.12;
+        total = subtotal + vat;
+    printf("Subtotal: Php %.2f\n",subtotal);
+    printf("VAT: Php %.2f\n",vat);
+    printf("Total: Php %.2f\n",total);
+    
+     
+    return 0;
+}
