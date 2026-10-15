@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main(){
+
+    char*course;
+    char code;
+    int units;
+    float rate;
+    float tuition;
+
+    printf("- - - -Course Type - - - -\n");
+    printf("C = Computer Science\n");
+    printf("E = Engineering\n");
+    printf("B = Business\n");
+    
+    printf("Enter your course type: ");
+    scanf("%c",&code);
+
+    printf("Enter the no. of units: ");
+    scanf("%d",&units);
+
+    switch(code){
+        case 'C':
+        course = "Computer Science";
+        rate = 1500;
+        break;
+
+        case 'E':
+        course = "Engineering";
+        rate = 1800;
+        break;
+
+        case 'B':
+        course = "Business";
+        rate = 1200;
+        break;
+
+        default:
+        printf("Invalid Input");
+    }
+    tuition = units * rate;
+   printf("- - - - Enrollment Summary - - - -\n");
+    printf("Course: %s\n",course);
+    printf("Units: %d\n", units);
+    printf("Tuition: %.2f\n",tuition);
+     
+    return 0;
+}
