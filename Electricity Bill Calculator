@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+
+    float kWh;
+    float bill;
+ printf("Enter kWh used: ");
+    scanf("%f",&kWh);
+
+    if(kWh<=100){
+        bill = kWh * 10;
+    } else{
+        bill = (kWh - 100) * 15 + 1000;
+    }
+
+    printf("Electricity Bill: Php %.2f",bill);
+
+    return 0;
+}
